@@ -1,52 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ajuda — Minimercado Bom Preço</title>
-<meta name="description" content="Ajuda e descrição das funcionalidades da página web do minimercado.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ajuda — Minimercado Bom Preço</title>
+  <meta name="description" content="Ajuda e descrição das funcionalidades do site do minimercado.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
 </head>
 <body>
-<header>
-<h1>Ajuda</h1>
-<nav aria-label="Navegação principal">
-<ul>
-<li><a href="index.html">Início</a></li>
-<li><a href="produtos.html">Produtos</a></li>
-<li><a href="servicos.html">Serviços</a></li>
-<li><a href="contato.html">Contato</a></li>
-<li><strong>Ajuda</strong></li>
-</ul>
-</nav>
-</header>
+  <a class="visually-hidden-focusable skip-link" href="#conteudo">Pular para o conteúdo</a>
 
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Minimercado Bom Preço</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro & Agendamento</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="ajuda.html">Ajuda</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<main>
-<section>
-<h2>Sobre o site</h2>
-<p>Este site apresenta um minimercado com categorias de produtos e serviços oferecidos.</p>
-</section>
+  <main id="conteudo" class="container py-5">
+    <h1 class="h3 mb-4">Ajuda</h1>
 
+    <section class="mb-4">
+      <h2 class="h5">Sobre o site</h2>
+      <p>Este site apresenta um minimercado com categorias de produtos e serviços, com agendamento para retirada ou tele-entrega. Foi desenvolvido em duas fases: na fase 1 com HTML puro; e na fase 2 com CSS/Bootstrap e JavaScript.</p>
+    </section>
 
-<section>
-<h2>Funcionalidades</h2>
-<ul>
-<li><strong>Produtos por categoria:</strong> acesse a página <a href="produtos.html">Produtos</a> para visualizar imagens, descrições e preços.</li>
-<li><strong>Serviços:</strong> acesse <a href="servicos.html">Serviços</a> para ver Retirada no local e Tele‑entrega, com valores.</li>
-<li><strong>Contato e autoria:</strong> dados da loja e do autor estão em <a href="contato.html">Contato</a>.</li>
-</ul>
-</section>
+    <section class="mb-4">
+      <h2 class="h5">Funcionalidades</h2>
+      <ul>
+        <li><strong>Carrossel inicial</strong> com imagens e legendas.</li>
+        <li><strong>Função temporal</strong> que mostra saudação e data/hora atualizadas.</li>
+        <li><strong>Formulário de cadastro</strong> com validação, máscara simples de formato e <strong>agendamento</strong> por data/hora.</li>
+        <li><strong>Acessibilidade</strong>: textos alternativos nas imagens, labels associados aos inputs, link “pular para o conteúdo”.</li>
+      </ul>
+    </section>
 
+    <section class="mb-4">
+      <h2 class="h5">Ajustes realizados na Fase 2</h2>
+      <ul>
+        <li>Aplicação do <strong>Bootstrap 5</strong> para layout responsivo, grid e componentes.</li>
+        <li>Inclusão de <strong>carrossel</strong> na página inicial.</li>
+        <li>Criação do <strong>formulário de cadastro e agendamento</strong> com validação de campos.</li>
+        <li>Implementação de <strong>JavaScript</strong> para saudação temporal, validação, resumo e regras básicas de agendamento.</li>
+        <li>Melhorias de <strong>acessibilidade</strong> (alt, labels, skip link, aria-live).</li>
+      </ul>
+    </section>
 
-<section>
-<h2>Como navegar</h2>
-<p>Use o menu no topo para mudar de página. Os links indicam claramente a página atual através do texto em negrito.</p>
-</section>
-</main>
+    <section>
+      <h2 class="h5">Como navegar</h2>
+      <p>Use o menu superior para acessar as páginas. Em <strong>Cadastro & Agendamento</strong>, preencha seus dados e escolha <em>Retirada</em> ou <em>Tele-entrega</em>, selecionando uma data e um horário disponíveis.</p>
+    </section>
+  </main>
 
+  <footer class="border-top py-4">
+    <div class="container small d-flex justify-content-between">
+      <p class="m-0">&copy; <span id="ano-atual"></span> Minimercado Bom Preço.</p>
+      <a href="contato.html" class="m-0">Contato</a>
+    </div>
+  </footer>
 
-<footer>
-<p>&copy; 2025 Minimercado Bom Preço.</p>
-</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

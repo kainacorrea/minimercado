@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro e Agendamento — Minimercado Bom Preço</title>
+  <meta name="description" content="Formulário de cadastro do cliente e agendamento de retirada ou tele-entrega.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <a class="visually-hidden-focusable skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Minimercado Bom Preço</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="cadastro.html">Cadastro & Agendamento</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="ajuda.html">Ajuda</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="conteudo" class="container py-5">
+    <h1 class="h3 mb-4">Cadastro do Cliente e Agendamento</h1>
+    <p class="text-secondary">Preencha seus dados. Campos com * são obrigatórios.</p>
+
+    <form id="form-cadastro" novalidate autocomplete="on" aria-describedby="help-cadastro">
+      <p id="help-cadastro" class="visually-hidden">Formulário com campos obrigatórios, selecione o tipo de serviço e agende data e horário.</p>
+
+      <fieldset class="border rounded-3 p-3 mb-4">
+        <legend class="float-none w-auto px-2">Identificação</legend>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="nome" class="form-label">Nome completo *</label>
+            <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome" required>
+            <div class="invalid-feedback">Informe seu nome.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="cpf" class="form-label">CPF *</label>
+            
+            <input type="text" id="cpf" name="cpf" class="form-control" 
+       placeholder="000.000.000-00" 
+       pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+
+            
+            <div class="form-text">Formato: 000.000.000-00</div>
+            <div class="invalid-feedback">Informe o CPF no formato correto.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">E-mail *</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@exemplo.com" required>
+            <div class="invalid-feedback">Informe um e-mail válido.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="telefone" class="form-label">Telefone *</label>
+            <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(00) 00000-0000" required>
+            <div class="invalid-feedback">Informe um telefone.</div>
+          </div>
+
+          <div class="col-md-12">
+            <label class="form-label d-block">Sexo *</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="sexoM" name="sexo" value="M" required>
+              <label class="form-check-label" for="sexoM">Masculino</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="sexoF" name="sexo" value="F" required>
+              <label class="form-check-label" for="sexoF">Feminino</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="sexoO" name="sexo" value="Outro" required>
+              <label class="form-check-label" for="sexoO">Outro</label>
+            </div>
+            <div class="invalid-feedback d-block">Selecione uma opção.</div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="border rounded-3 p-3 mb-4">
+        <legend class="float-none w-auto px-2">Endereço</legend>
+
+        <div class="row g-3">
+          <div class="col-md-8">
+            <label for="endereco" class="form-label">Endereço *</label>
+            <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Rua, avenida..." required>
+            <div class="invalid-feedback">Informe o endereço.</div>
+          </div>
+          <div class="col-md-4">
+            <label for="numero" class="form-label">Número *</label>
+            <input type="number" id="numero" name="numero" class="form-control" min="1" placeholder="0" required>
+            <div class="invalid-feedback">Informe o número.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="bairro" class="form-label">Bairro *</label>
+            <input type="text" id="bairro" name="bairro" class="form-control" required>
+            <div class="invalid-feedback">Informe o bairro.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="cidade" class="form-label">Cidade *</label>
+            <input type="text" id="cidade" name="cidade" class="form-control" required>
+            <div class="invalid-feedback">Informe a cidade.</div>
+          </div>
+          <div class="col-md-4">
+            <label for="estado" class="form-label">UF *</label>
+            <input type="text" id="estado" name="estado" class="form-control" maxlength="2" placeholder="SC" required>
+            <div class="invalid-feedback">Informe a UF (2 letras).</div>
+          </div>
+          <div class="col-md-8">
+            <label for="cep" class="form-label">CEP *</label>
+            <input type="text" id="cep" name="cep" class="form-control" 
+       placeholder="00000-000" pattern="[0-9]{5}-[0-9]{3}" required>
+
+            <div class="form-text">Formato: 00000-000</div>
+            <div class="invalid-feedback">Informe o CEP no formato correto.</div>
+          </div>
+          <div class="col-md-12">
+            <label for="complemento" class="form-label">Complemento</label>
+            <input type="text" id="complemento" name="complemento" class="form-control" placeholder="Apartamento, bloco, ponto de referência...">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="border rounded-3 p-3 mb-4">
+        <legend class="float-none w-auto px-2">Serviço e Agendamento</legend>
+
+        <div class="mb-3">
+          <span class="form-label d-block">Escolha do serviço *</span>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="servico" id="servicoRetirada" value="retirada" required>
+            <label class="form-check-label" for="servicoRetirada">Retirada no local (sem taxa)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="servico" id="servicoEntrega" value="entrega" required>
+            <label class="form-check-label" for="servicoEntrega">Tele-entrega (R$ 8,00)</label>
+          </div>
+          <div class="invalid-feedback d-block">Selecione uma opção de serviço.</div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="data" class="form-label">Data *</label>
+            <input type="date" id="data" name="data" class="form-control" required>
+            <div class="invalid-feedback">Escolha uma data válida.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="hora" class="form-label">Horário *</label>
+            <input type="time" id="hora" name="hora" class="form-control" required>
+            <div class="invalid-feedback">Escolha um horário válido.</div>
+            <div class="form-text">Atendimento: 08:00 às 20:00</div>
+          </div>
+        </div>
+
+        <div class="form-check mt-3">
+          <input class="form-check-input" type="checkbox" id="novidades" name="novidades">
+          <label class="form-check-label" for="novidades">Quero receber ofertas por e-mail</label>
+        </div>
+      </fieldset>
+
+      <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+      </div>
+    </form>
+
+    <hr class="my-5">
+
+    <section aria-live="polite" aria-atomic="true">
+      <h2 class="h5">Prévia do agendamento</h2>
+      <p class="text-secondary">Após enviar, aparece aqui um resumo simples (dados armazenados no seu navegador).</p>
+      <pre id="resumo" class="bg-light p-3 rounded-3 small" tabindex="0"></pre>
+    </section>
+  </main>
+
+  <footer class="border-top py-4">
+    <div class="container small d-flex justify-content-between">
+      <p class="m-0">&copy; <span id="ano-atual"></span> Minimercado Bom Preço.</p>
+      <a href="ajuda.html" class="m-0">Ajuda</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

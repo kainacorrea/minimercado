@@ -1,97 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Minimercado Bom Preço — Produtos</title>
-<meta name="description" content="Lista de produtos por categoria com imagens, descrição e preços.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produtos — Minimercado Bom Preço</title>
+  <meta name="description" content="Produtos por categoria com imagens, descrições e preços.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
 </head>
 <body>
-<header>
-<h1>Minimercado Bom Preço</h1>
-<nav aria-label="Navegação principal">
-<ul>
-<li><a href="index.html">Início</a></li>
-<li><strong>Produtos</strong></li>
-<li><a href="servicos.html">Serviços</a></li>
-<li><a href="contato.html">Contato</a></li>
-<li><a href="ajuda.html">Ajuda</a></li>
-</ul>
-</nav>
-</header>
+  <a class="visually-hidden-focusable skip-link" href="#conteudo">Pular para o conteúdo</a>
 
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Minimercado Bom Preço</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro & Agendamento</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="ajuda.html">Ajuda</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<main>
-<h2>Produtos por categoria</h2>
+  <main id="conteudo" class="container py-5">
+    <h1 class="h3 mb-4">Produtos</h1>
 
+    <section id="frutas-verduras" class="mb-5">
+      <h2 class="h4">Frutas e Verduras</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <img src="assets/img/frutas/banana.jpg" class="card-img-top" alt="Cachos de banana nanica madura">
+            <div class="card-body">
+              <h3 class="h5 card-title">Banana Nanica (1 kg)</h3>
+              <p class="card-text">Bananas selecionadas, ideais para lanches e vitaminas.</p>
+              <p class="fw-semibold">R$ 6,99</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <img src="assets/img/frutas/maca.jpg" class="card-img-top" alt="Maçãs gala vermelhas">
+            <div class="card-body">
+              <h3 class="h5 card-title">Maçã Gala (1 kg)</h3>
+              <p class="card-text">Maçãs frescas, doces e crocantes.</p>
+              <p class="fw-semibold">R$ 9,49</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="frutas-verduras" aria-labelledby="titulo-frutas-verduras">
-<h3 id="titulo-frutas-verduras">Frutas e verduras</h3>
+    <section id="nao-pereciveis" class="mb-5">
+      <h2 class="h4">Alimentos não perecíveis</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <img src="assets/img/nao-pereciveis/arroz.jpg" class="card-img-top" alt="Pacote de arroz tipo 1 de 5 kg na prateleira">
+            <div class="card-body">
+              <h3 class="h5 card-title">Arroz Tipo 1 (5 kg)</h3>
+              <p class="card-text">Grãos selecionados, rendimento e sabor.</p>
+              <p class="fw-semibold">R$ 29,90</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <img src="assets/img/nao-pereciveis/feijao.jpg" class="card-img-top" alt="Pacote de feijão carioca de 1 kg">
+            <div class="card-body">
+              <h3 class="h5 card-title">Feijão Carioca (1 kg)</h3>
+              <p class="card-text">Cozimento uniforme e saboroso.</p>
+              <p class="fw-semibold">R$ 8,99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section id="higiene-limpeza" class="mb-4">
+      <h2 class="h4">Higiene e limpeza</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <img src="assets/img/higiene/sabao-po.jpg" class="card-img-top" alt="Caixa de sabão em pó com rótulo azul">
+            <div class="card-body">
+              <h3 class="h5 card-title">Sabão em Pó (800 g)</h3>
+              <p class="card-text">Limpeza eficiente das roupas, perfume suave.</p>
+              <p class="fw-semibold">R$ 12,50</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <img src="assets/img/higiene/desinfetante.jpg" class="card-img-top" alt="Frasco de desinfetante 500 ml com tampa verde">
+            <div class="card-body">
+              <h3 class="h5 card-title">Desinfetante (500 ml)</h3>
+              <p class="card-text">Higienização de pisos e superfícies.</p>
+              <p class="fw-semibold">R$ 7,90</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<article>
-<h4>Banana Nanica (1 kg)</h4>
-<img src="assets/img/frutas/banana.jpg" alt="Cachos de banana nanica" width="280">
-<p>Bananas selecionadas, ideais para lanches e vitaminas.</p>
-<p><strong>R$ 6,99</strong></p>
-</article>
+    <p><a class="btn btn-outline-primary" href="cadastro.html">Agendar retirada ou tele-entrega</a></p>
+  </main>
 
+  <footer class="border-top py-4">
+    <div class="container small d-flex justify-content-between">
+      <p class="m-0">&copy; <span id="ano-atual"></span> Minimercado Bom Preço.</p>
+      <a href="ajuda.html" class="m-0">Ajuda</a>
+    </div>
+  </footer>
 
-<article>
-<h4>Maçã Gala (1 kg)</h4>
-<img src="assets/img/frutas/maca.jpg" alt="Maçãs gala vermelhas" width="280">
-<p>Maçãs frescas, doces e crocantes.</p>
-<p><strong>R$ 9,49</strong></p>
-</article>
-</section>
-
-
-<section id="nao-pereciveis" aria-labelledby="titulo-nao-pereciveis">
-<h3 id="titulo-nao-pereciveis">Produtos alimentícios não perecíveis</h3>
-
-
-<article>
-<h4>Arroz Tipo 1 (5 kg)</h4>
-<img src="assets/img/nao-pereciveis/arroz.jpg" alt="Pacote de arroz tipo 1 de 5 quilos" width="280">
-<p>Grãos selecionados, rendimento e sabor no dia a dia.</p>
-<p><strong>R$ 29,90</strong></p>
-</article>
-
-
-<article>
-<h4>Feijão Carioca (1 kg)</h4>
-<img src="assets/img/nao-pereciveis/feijao.jpg" alt="Pacote de feijão carioca de 1 quilo" width="280">
-<p>Feijão de qualidade, cozimento uniforme e saboroso.</p>
-<p><strong>R$ 8,99</strong></p>
-</article>
-</section>
-
-
-<section id="higiene-limpeza" aria-labelledby="titulo-higiene-limpeza">
-<h3 id="titulo-higiene-limpeza">Higiene e limpeza</h3>
-
-
-<article>
-<h4>Sabão em Pó (800 g)</h4>
-<img src="assets/img/higiene/sabao-po.jpg" alt="Caixa de sabão em pó" width="280">
-<p>Limpeza eficiente das roupas, perfume suave.</p>
-<p><strong>R$ 12,50</strong></p>
-</article>
-
-
-<article>
-<h4>Desinfetante (500 ml)</h4>
-<img src="assets/img/higiene/desinfetante.jpg" alt="Frasco de desinfetante" width="280">
-<p>Higienização de pisos e superfícies com ação antibacteriana.</p>
-<p><strong>R$ 7,90</strong></p>
-</article>
-</section>
-</main>
-
-
-<footer>
-<p>&copy; 2025 Minimercado Bom Preço. Informações meramente ilustrativas.</p>
-<p>Autor do site: Kainã Correa — <a href="contato.html">contato</a></p>
-</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

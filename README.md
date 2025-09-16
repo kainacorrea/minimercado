@@ -1,29 +1,20 @@
-# Minimercado Bom Preço — Fase 1
+# Minimercado Bom Preço — Fase 2
 
-
-Plataforma online estática de um minimercado para a disciplina Fundamentos de Sistemas Web.
-
-
-## Objetivo
-Exibir produtos por categorias com imagens, descrições e preços, além dos serviços (retirada e tele‑entrega) com valores. Publicação via GitHub Pages.
-
+Site do minimercado com Bootstrap e JavaScript. Inclui carrossel, saudação temporal, formulário de cadastro e agendamento, e melhorias de acessibilidade.
 
 ## Páginas
-- `index.html`: apresentação e links rápidos.
-- `produtos.html`: 2 itens por categoria obrigatória.
-- `servicos.html`: descrição e valor de Retirada e Tele‑entrega.
-- `contato.html`: dados de contato do estabelecimento e autoria.
-- `ajuda.html`: descrição de funcionalidades e navegação.
+- `index.html`: carrossel e saudação temporal.
+- `produtos.html`: produtos por categoria (imagens, descrição, preço).
+- `servicos.html`: serviços com CTA.
+- `cadastro.html`: formulário de cadastro + agendamento (data/hora).
+- `contato.html`: dados de contato e autoria.
+- `ajuda.html`: funcionalidades e **ajustes realizados na Fase 2**.
 
+## Acessibilidade
+- `alt` descritivo nas imagens; labels para inputs; skip link; aria-live no resumo.
 
-## Como rodar localmente
-Basta abrir os arquivos `.html` no navegador. Não há dependências, CSS ou JavaScript.
+## Execução
+Abra os `.html` no navegador. Publicação via GitHub Pages.
 
-
-## Publicação
-- Repositório: https://github.com/kainacorrea/minimercado
-- Site (GitHub Pages): https://kainacorrea.github.io/minimercado/
-
-
-## Licença
-Uso acadêmico. Imagens meramente ilustrativas.
+## Publicação (Pages)
+Settings → Pages → Deploy from a branch → Branch `main` → Folder `/root`.

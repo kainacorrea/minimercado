@@ -1,57 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Minimercado Bom Preço — Início</title>
-<meta name="description" content="Plataforma online de um minimercado: produtos por categoria e serviços de retirada e tele-entrega.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minimercado Bom Preço — Início</title>
+  <meta name="description" content="Minimercado com produtos por categoria e serviços de retirada e tele-entrega.">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
 </head>
 <body>
-<header>
-<h1>Minimercado Bom Preço</h1>
-<p>Produtos frescos, preços justos e entrega prática.</p>
-<nav aria-label="Navegação principal">
-<ul>
-<li><strong>Início</strong></li>
-<li><a href="produtos.html">Produtos</a></li>
-<li><a href="servicos.html">Serviços</a></li>
-<li><a href="contato.html">Contato</a></li>
-<li><a href="ajuda.html">Ajuda</a></li>
-</ul>
-</nav>
-</header>
+  <a class="visually-hidden-focusable skip-link" href="#conteudo">Pular para o conteúdo</a>
 
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Minimercado Bom Preço</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navMain" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+            <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro & Agendamento</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="ajuda.html">Ajuda</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<main>
-<section>
-<h2>Bem-vindo</h2>
-<p>Conheça nossas categorias e serviços disponíveis.</p>
-</section>
+    <!-- Carrossel Bootstrap -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Promoções em destaque">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/img/carrossel1.jpg" class="d-block w-100" alt="Cesta com frutas frescas variadas">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Frutas e Verduras</h5>
+            <p>Qualidade e frescor todos os dias.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/carrossel2.jpg" class="d-block w-100" alt="Prateleiras com alimentos não perecíveis organizados">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Não Perecíveis</h5>
+            <p>Estoque completo para sua despensa.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/carrossel3.jpg" class="d-block w-100" alt="Produtos de limpeza e higiene sobre bancada">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Higiene & Limpeza</h5>
+            <p>Sua casa limpa e perfumada.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Slide anterior">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Próximo slide">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
 
+  <main id="conteudo" class="container py-5">
+    <section class="mb-4">
+      <h1 class="h3">Bem-vindo ao Bom Preço</h1>
+      <p class="mb-1">Seu minimercado online com retirada no local ou tele-entrega.</p>
+      <p id="saudacao-tempo" class="text-secondary" aria-live="polite"></p>
+    </section>
 
-<section>
-<h2>Categorias</h2>
-<ul>
-<li><a href="produtos.html#frutas-verduras">Frutas e verduras</a></li>
-<li><a href="produtos.html#nao-pereciveis">Alimentos não perecíveis</a></li>
-<li><a href="produtos.html#higiene-limpeza">Higiene e limpeza</a></li>
-</ul>
-</section>
+    <section class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="assets/img/frutas/banana.jpg" class="card-img-top" alt="Cachos de banana nanica madura">
+          <div class="card-body">
+            <h2 class="h5 card-title">Frutas e Verduras</h2>
+            <p class="card-text">Produtos frescos selecionados.</p>
+            <a class="btn btn-primary" href="produtos.html#frutas-verduras">Ver itens</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="assets/img/nao-pereciveis/arroz.jpg" class="card-img-top" alt="Pacote de arroz tipo 1 de 5 kg">
+          <div class="card-body">
+            <h2 class="h5 card-title">Não Perecíveis</h2>
+            <p class="card-text">Para manter sua despensa completa.</p>
+            <a class="btn btn-primary" href="produtos.html#nao-pereciveis">Ver itens</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="assets/img/higiene/sabao-po.jpg" class="card-img-top" alt="Caixa de sabão em pó">
+          <div class="card-body">
+            <h2 class="h5 card-title">Higiene & Limpeza</h2>
+            <p class="card-text">Higienização completa para sua casa.</p>
+            <a class="btn btn-primary" href="produtos.html#higiene-limpeza">Ver itens</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="border-top py-4">
+    <div class="container small">
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="m-0">&copy; <span id="ano-atual"></span> Minimercado Bom Preço. Autor do site: Kainã Correa.</p>
+        <nav aria-label="Navegação do rodapé">
+          <a class="me-3" href="contato.html">Contato</a>
+          <a class="me-3" href="ajuda.html">Ajuda</a>
+          <a href="cadastro.html" class="fw-semibold">Agendar pedido</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
 
-<section>
-<h2>Serviços</h2>
-<ul>
-<li><a href="servicos.html#retirada">Retirada no local</a></li>
-<li><a href="servicos.html#tele-entrega">Tele‑entrega</a></li>
-</ul>
-</section>
-</main>
-
-
-<footer>
-<p>&copy; 2025 Minimercado Bom Preço. Todos os direitos reservados.</p>
-<p>Autor do site: Kainã Correa — <a href="contato.html">contato</a></p>
-</footer>
+  <!-- Bootstrap JS + App JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+/* Alto contraste para links no foco e no hover */
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+/* Botão de pular conteúdo visível ao focar */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #111;
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 1000;
+}
+.skip-link:focus {
+  left: 8px;
+}
+
+/* Espaços gerais */
+main { min-height: 60vh; }
+.carousel .carousel-caption h5 { text-shadow: 0 1px 2px rgba(0,0,0,.6); }
